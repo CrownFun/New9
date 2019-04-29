@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Javastart - newsletter 9 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            textarea{
+                width: 400px;
+                height: 300px;
+            }
+
+            select{
+               width: 200px;
+            }
+
+    </style>
+</head>
+<body>
+<div> Javastart Newsletter 9 - by CrownFun</div>
+<br>
+<form method="POST">
+    <textarea name="sample" placeholder="Content here..."></textarea><br/>
+    <select name="formatter">
+        <option value="lower">lowercase</option>
+        <option value="upper">UPPERCASE</option>
+        <option value="mixed">MiXeDcAsE</option>
+    </select>
+    </br>
+    </br>
+    <input type="submit" value="Transform">
+</form>
+</br>
+</br>
+<textarea th:text="${textFormatted}" placeholder="Result..."></textarea>
+</body>
+</html>
